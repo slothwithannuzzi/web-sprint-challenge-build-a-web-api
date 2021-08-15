@@ -13,5 +13,8 @@ server.use(cors())
 server.use('/api/projects', projectsRouter);
 server.use('/api/actions', actionsRouter);
 
+server.get('/', (req,res) => {
+    res.send('This is a server')
+})
 
 module.exports = server;
